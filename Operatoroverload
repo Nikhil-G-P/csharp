@@ -1,0 +1,30 @@
+using System;
+    public class item
+    {
+        public int i;
+        public item(int j)
+        {
+            i=j;
+        }
+        public static item operator*(item x, item y)
+        {
+            System.Console.WriteLine("operatot *" +x.i+" "+y.i);
+            item z=new item(x.i*y.i);
+            return z;
+        }
+    }
+    public class test
+    {
+        public static void Main()
+        {
+            item a=new item(10);
+            item b=new item(5);
+            item c;
+            c=a*b;
+            System.Console.WriteLine(c.i);
+        }
+    }
+    
+    OUTPUT:
+    operatot *10 5
+    50
